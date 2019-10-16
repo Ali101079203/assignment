@@ -15,6 +15,6 @@ install:
   - ls -la
   - npm install 
   - ls -la
-  - cd node-modules
+  - cd node_modules
   - ls -la
   
