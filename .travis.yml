@@ -6,15 +6,16 @@ node_js:
 cache: npm
 
 before_install:
-  - ls -la
-  - mkdir dist
-  - cd dist
-  - ls -la
-
-install:
-  - ls -la
-  - npm install 
-  - ls -la
-  - cd node_modules
-  - ls -la
+  - "npm config set spin false"
+  - npm i -g now
   
+install:
+  - npm install
+  - npm run build
+  
+  deploy:
+    provider: script
+    script: bash scrits/deploy.sh
+    skip_cleanup: true
+    
+    
