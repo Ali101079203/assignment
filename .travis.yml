@@ -13,9 +13,9 @@ install:
   - npm install
   - npm run build
   
-  deploy:
-    provider: script
-    script: bash scrits/deploy.sh
-    skip_cleanup: true
-    
+deploy:
+  provider: script
+  script: bash scrits/deploy.sh
+  skip_cleanup: true
+  
     
